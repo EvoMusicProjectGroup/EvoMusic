@@ -73,7 +73,7 @@ counter = 0
 gen = 0
 
 
-def initlazation(file1='back-end/12barblues_ms.mid', file2='back-end/12barblues_ms.mid', pop_num=50, length=50):
+def initlazation(file1='blue/12barblues_ms.mid', file2='back-end/12barblues_ms.mid', pop_num=50, length=50):
     global counter
     counter = 0
     global gen
