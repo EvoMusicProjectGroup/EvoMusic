@@ -73,7 +73,7 @@ counter = 0
 gen = 0
 
 
-def initlazation(file1='blue/12barblues_ms.mid', file2='back-end/12barblues_ms.mid', pop_num=50, length=50):
+def initlazation(file1='12barblues_ms.mid', file2='303407850dc55a47eef0d2ac02bcecd2.mid', pop_num=50, length=50):
     global counter
     counter = 0
     global gen
@@ -87,14 +87,14 @@ def initlazation(file1='blue/12barblues_ms.mid', file2='back-end/12barblues_ms.m
     try:
         source1, tick1 = read_to_notes(dir + file1)
     except:
-        source1, tick1 = read_to_notes('back-end/12barblues_ms.mid')
+        source1, tick1 = read_to_notes(file1)
 
     org = original(source1, tick1)
     # read input 2
     try:
         source2, tick2 = read_to_notes(dir + file2)
     except:
-        source2, tick2 = read_to_notes('back-end/12barblues_ms.mid')
+        source2, tick2 = read_to_notes(file2)
 
     # init pool
     feature_pool = Feature_pool()
@@ -125,12 +125,12 @@ def initlazation(file1='blue/12barblues_ms.mid', file2='back-end/12barblues_ms.m
     # user selection
     # output 1，2 TODO switch to evaluated best as competcotr
     a, b, c = feedmax(population, num=3)
-    a.save_midi(dir + "1.mid")
-    counter += 1
-    b.save_midi(dir + "2.mid")
-    counter += 1
-    c.save_midi(dir + "3.mid")
-    counter += 1
+    # a.save_midi(dir + "1.mid")
+    # counter += 1
+    # b.save_midi(dir + "2.mid")
+    # counter += 1
+    # c.save_midi(dir + "3.mid")
+    # counter += 1
 
 
 def loop(choice='r'):
