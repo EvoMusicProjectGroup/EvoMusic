@@ -73,7 +73,7 @@ counter = 0
 gen = 0
 
 
-def initlazation(file1='12barblues_ms.mid', file2='303407850dc55a47eef0d2ac02bcecd2.mid', pop_num=50, length=50):
+def initlazation(file1='303407850dc55a47eef0d2ac02bcecd2.mid', file2='035d2131e824eb51878007013786806a.mid', pop_num=50, length=50):
     global counter
     counter = 0
     global gen
@@ -176,8 +176,8 @@ def loop(choice='r'):
             b.save_midi(dir + "8.mid")
 
             # receive choice
-            desicion = choice  # reroll to provide another set of choice
-
+            # desicion = choice  # reroll to provide another set of choice
+            desicion = choice
             if choice == '1':
                 # give 1 more weighs
                 print('1 is better')
